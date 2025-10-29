@@ -1,34 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: rgb(240, 144, 160);
+  font-size: 1.6rem;
+  background-color: #ffe6d4;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-h4 {
-  text-align: center;
-  font-size: 8rem;
-  margin-bottom: -3rem;
+main {
+  padding: 5rem 4rem;
 }
 
-p {
-  font-size: 2rem;
-  text-align: center;
-  color: white;
-}   
+ul {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+ul li {
+  margin: 1.3rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
 
 #image-container {
+  margin: 4rem 0;
+  width: 80vw;
+  max-width: 300px;
+}
+
+#image-container img:hover {
+  transform: scale(1.05) rotate(4deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery {
+  margin-top: 2.6rem;
+}
+
+.gallery-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 4rem;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 0.5px solid #999;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #fff;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: center;
+  font-size: 1.2rem;
 }
-
 
 a {
-  color: white;
   text-decoration: none;
+  color: #000;
 }
 
-a:hover p {
-  color: black;
+@media (min-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+  .hero {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
