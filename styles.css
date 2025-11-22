@@ -16,15 +16,17 @@ body {
 }
 
 main {
-  padding: 5rem 4rem;
+  padding: 2.5rem 4rem;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-ul {
+main ul {
   list-style: decimal;
   margin-left: 20px;
 }
 
-ul li {
+main ul li {
   margin: 1.3rem 0;
 }
 
@@ -120,4 +122,44 @@ a {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+
+.nav-links {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.4 );
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+  margin: 1rem 1.5rem;
+  display: inline-block;
+  color: slateblue;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+    transform: scale(1.05);
+}
+
+.history-content {
+  max-width: 90ch;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.history-content p {
+    margin-bottom: 1.5rem;
 }
